@@ -1,4 +1,4 @@
-from src.operations import add
+from src.operations import add,subtract
 
 A = [
     [1, 2],
@@ -11,6 +11,7 @@ B = [
 ]
 
 print(add(A, B))
+print(subtract(A, B))
 A = [
     [1, 2],
     [3]
@@ -22,3 +23,4 @@ B = [
 ]
 
 print(add(A, B))
+print(subtract(A, B))
