@@ -1,4 +1,4 @@
-from src.validation import *
+from src.operations import add
 
 A = [
     [1, 2],
@@ -10,12 +10,15 @@ B = [
     [7, 8]
 ]
 
-C = [
-    [1, 2, 3],
-    [4, 5, 6]
+print(add(A, B))
+A = [
+    [1, 2],
+    [3]
 ]
 
-print(is_valid_matrix(A))
-print(have_same_dimension(A, B))
-print(is_square_matrix(A))
-print(can_multiply(A, C))
+B = [
+    [1, 2],
+    [3, 4]
+]
+
+print(add(A, B))
