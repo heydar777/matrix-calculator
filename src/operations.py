@@ -18,7 +18,7 @@ def add(matrix1,matrix2):
 
         row = []
 
-        for j in range(len(matrix1)):
+        for j in range(len(matrix1[0])):
 
             row.append(matrix1[i][j] + matrix2[i][j])
         
@@ -45,9 +45,29 @@ def subtract(matrix1,matrix2):
 
         row = []
 
-        for j in range(len(matrix1)):
+        for j in range(len(matrix1[0])):
 
             row.append(matrix1[i][j] - matrix2[i][j])
         
+        result.append(row)
+    return result
+
+
+def Scalar_Multiplication(num,matrix):
+
+    if not is_valid_matrix(matrix):
+        return False
+    if not isinstance(num,int):
+        return False
+
+    result = []
+
+    for i in range(len(matrix)):
+        row = []
+
+        for j in range(len(matrix[0])):
+
+            row.append(matrix[i][j] * num)
+
         result.append(row)
     return result
