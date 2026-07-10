@@ -119,6 +119,23 @@ def transpose(matrix):
         result.append(row)
     return result
 
+def zeros(rows, cols):
+
+    result = []
+
+    for i in range(rows):
+        
+        row = []
+        A = 0
+        for j in range(cols):
+            
+            row.append(A)
+        
+        result.append(row)
+    
+    return result
+
+
 
 
 

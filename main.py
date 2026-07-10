@@ -1,4 +1,4 @@
-from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose
+from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose,zeros
 
 A = [
     [1,2,3],
@@ -12,8 +12,9 @@ B = [
 ]
 
 print(transpose(A))
-
 print(transpose(B))
+print(zeros(2,3))
+print(zeros(4,3))
 A = [
     [1, 2],
     [3]
