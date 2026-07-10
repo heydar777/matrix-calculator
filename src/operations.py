@@ -283,3 +283,15 @@ def adjoint(matrix):
 
     return transpose(cofactor(matrix))
 
+def inverse(matrix):
+    if not is_valid_matrix(matrix):
+        return False
+    if not is_square_matrix(matrix):
+        return False
+    
+    det = determinant(matrix)
+    if det == 0:
+        return False
+    adj = adjoint(matrix)
+    
+    return scalar_divide(adj,det)
