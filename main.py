@@ -1,32 +1,18 @@
-from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose,zeros,identity
+from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose,zeros,identity,determinant_2x2
+from src.validation import is_matrix_2x2
 
 A = [
     [1,2,3],
     [0 , 1 , 1]
 ]
 
-B = [
-    [1, 1],
-    [2, 0],
-    [0, 1]
-]
-
-print(transpose(A))
-print(transpose(B))
-print(zeros(2,3))
-print(zeros(4,3))
-print(identity(4))
-print(identity(2))
-A = [
-    [1, 2],
-    [3]
-]
 
 B = [
     [1, 2],
     [3, 4]
 ]
-print(Scalar_Multiplication(3, A))
-print(add(A, B))
+print(is_matrix_2x2(A))
+print(is_matrix_2x2(B))
+print(determinant_2x2(B))
 print(subtract(A, B))
 

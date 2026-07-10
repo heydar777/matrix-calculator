@@ -1,4 +1,4 @@
-from src.validation import is_valid_matrix,have_same_dimension,can_multiply
+from src.validation import is_valid_matrix,have_same_dimension,can_multiply,is_matrix_2x2
 
 
 def add(matrix1,matrix2):
@@ -169,6 +169,17 @@ def identity(size:int) -> list:
     
     return result
 
+def determinant_2x2(matrix):
+
+    if not is_valid_matrix(matrix):
+        return False
+    if not is_matrix_2x2(matrix):
+        return False
+    
+    result = (matrix[0][0] * matrix[1][1]) - (matrix[0][1] * matrix[1][0])
+    
+
+    return result
 
 
 
