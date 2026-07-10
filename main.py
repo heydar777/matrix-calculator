@@ -1,4 +1,4 @@
-from src.operations import add,subtract,Scalar_Multiplication,multiply
+from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose
 
 A = [
     [1,2,3],
@@ -11,7 +11,9 @@ B = [
     [0, 1]
 ]
 
-print(multiply(A, B))
+print(transpose(A))
+
+print(transpose(B))
 A = [
     [1, 2],
     [3]

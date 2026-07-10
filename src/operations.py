@@ -101,4 +101,24 @@ def multiply(matrix1,matrix2):
     
     return result
 
+def transpose(matrix):
+
+    if not is_valid_matrix(matrix):
+        return False
+    
+    result = []
+
+    for i in range(len(matrix[0])):
+
+        row = []
+
+        for j in range(len(matrix)):
+
+
+            row.append(matrix[j][i])
+        result.append(row)
+    return result
+
+
+
 
