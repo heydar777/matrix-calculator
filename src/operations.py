@@ -257,5 +257,10 @@ def cofactor(matrix):
         result.append(row)
     return result
 
+def adjoint(matrix):
 
+    if not is_square_matrix(matrix):
+        return False
+
+    return transpose(cofactor(matrix))
 
