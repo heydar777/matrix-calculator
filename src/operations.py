@@ -220,6 +220,9 @@ def determinant(matrix):
     
     if not is_square_matrix(matrix):
         return False
+
+    if len(matrix) == 1:
+        return matrix[0][0]
     
     if is_matrix_2x2(matrix):
         return determinant_2x2(matrix)
@@ -234,3 +237,25 @@ def determinant(matrix):
         
         det += determinant(M)*value*sign 
     return det
+
+def cofactor(matrix):
+
+    if not is_valid_matrix(matrix):
+        return False
+
+    result = []
+
+    for i in range(len(matrix)):
+        row = []
+
+        for j in range(len(matrix[0])):
+
+            sign = (-1) ** (i+j)
+            M = minor(matrix,i,j)
+
+            row.append(sign * determinant(M))
+        result.append(row)
+    return result
+
+
+
