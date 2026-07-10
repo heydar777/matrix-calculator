@@ -53,11 +53,11 @@ def subtract(matrix1,matrix2):
     return result
 
 
-def Scalar_Multiplication(num,matrix):
+def scalar_Multiplication(matrix,num):
 
     if not is_valid_matrix(matrix):
         return False
-    if not isinstance(num,int):
+    if not isinstance(num,(int,float)):
         return False
 
     result = []
@@ -71,6 +71,25 @@ def Scalar_Multiplication(num,matrix):
 
         result.append(row)
     return result
+
+def scalar_divide(matrix,num):
+    if not is_valid_matrix(matrix):
+        return False
+    if not isinstance(num,(int,float)):
+        return False
+    if num == 0:
+        return False
+    result = []
+
+    for i in range(len(matrix)):
+        row = []
+
+        for j in range(len(matrix[0])):
+
+            row.append(matrix[i][j] / num)
+
+        result.append(row)
+    return result  
 
 def multiply(matrix1,matrix2):
 
