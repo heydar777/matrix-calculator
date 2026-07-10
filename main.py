@@ -1,4 +1,4 @@
-from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose,zeros
+from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose,zeros,identity
 
 A = [
     [1,2,3],
@@ -15,6 +15,8 @@ print(transpose(A))
 print(transpose(B))
 print(zeros(2,3))
 print(zeros(4,3))
+print(identity(4))
+print(identity(2))
 A = [
     [1, 2],
     [3]

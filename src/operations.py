@@ -126,15 +126,48 @@ def zeros(rows, cols):
     for i in range(rows):
         
         row = []
-        A = 0
+        
         for j in range(cols):
             
-            row.append(A)
+            row.append(0)
         
         result.append(row)
     
     return result
 
+def identity(size:int) -> list:
+    """
+    Create an identity matrix.
+
+    Args:
+        size (int): Number of rows and columns.
+
+    Returns:
+        list: Identity matrix.
+    """
+
+    if not isinstance(size,int):
+        return False
+
+    if size <= 0 :
+        return False
+
+    result = []
+
+    for i in range(size):
+
+        row = []
+
+        for j in range(size):
+
+            if i == j :
+                
+                row.append(1)
+            else :
+                row.append(0)
+        result.append(row)
+    
+    return result
 
 
 
