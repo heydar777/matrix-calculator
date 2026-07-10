@@ -1,4 +1,4 @@
-from src.validation import is_valid_matrix,have_same_dimension,can_multiply,is_matrix_2x2
+from src.validation import is_valid_matrix,have_same_dimension,can_multiply,is_matrix_2x2,is_square_matrix,is_matrix_3x3
 
 
 def add(matrix1,matrix2):
@@ -181,5 +181,56 @@ def determinant_2x2(matrix):
 
     return result
 
+def minor(matrix,row,col):
+
+    """
+    Return the minor matrix after removing
+    the specified row and column.
+    """
+
+    if not is_valid_matrix(matrix):
+        return False
+    if not is_square_matrix(matrix):
+        return False
+    
+    if row < 0 or row >= len(matrix):
+        return False
+
+    if col < 0 or col >= len(matrix[0]):
+        return False
+    
+    result = []
+    for i in range(len(matrix)):
+         
+        if i == row:
+            continue
+        new_row = []
+
+        for j in range(len(matrix[0])):
+            
+            if j == col:
+                continue
+            new_row.append(matrix[i][j])
+        
+        result.append(new_row)
+    return result
 
 
+def determinant(matrix):
+    
+    if not is_square_matrix(matrix):
+        return False
+    
+    if is_matrix_2x2(matrix):
+        return determinant_2x2(matrix)
+    
+
+    det = 0
+    for j in range(len(matrix[0])):
+
+        M = minor(matrix,0,j)
+        sign = (-1) ** j
+        value = matrix[0][j]
+        
+        det += determinant(M)*value*sign 
+    return det

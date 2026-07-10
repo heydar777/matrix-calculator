@@ -91,6 +91,20 @@ def is_matrix_2x2(matrix):
     
     return True
 
+def is_matrix_3x3(matrix):
+
+    if not is_valid_matrix(matrix):
+        return False
+    if not is_square_matrix(matrix):
+        return False
+    
+    if len(matrix) != 3:
+        return False
+    if len(matrix[0]) != 3:
+        return False
+    
+    return True
+
 def can_multiply(matrix1,matrix2):
 
     if not is_valid_matrix(matrix1):
