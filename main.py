@@ -1,20 +1,17 @@
-from src.operations import add,subtract,Scalar_Multiplication
+from src.operations import add,subtract,Scalar_Multiplication,multiply
 
 A = [
-    [1, 2],
-    [3, 4]
+    [1,2,3],
+    [0 , 1 , 1]
 ]
 
 B = [
-    [5, 6],
-    [7, 8]
+    [1, 1],
+    [2, 0],
+    [0, 1]
 ]
 
-print(add(A, B))
-print(subtract(A, B))
-print(Scalar_Multiplication(3, B))
-print(Scalar_Multiplication(-3, B))
-print(Scalar_Multiplication('hass', B))
+print(multiply(A, B))
 A = [
     [1, 2],
     [3]
