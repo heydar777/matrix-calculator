@@ -53,7 +53,7 @@ def subtract(matrix1,matrix2):
     return result
 
 
-def scalar_Multiplication(matrix,num):
+def scalar_multiplication(matrix,num):
 
     if not is_valid_matrix(matrix):
         return False
