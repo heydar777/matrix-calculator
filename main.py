@@ -1,22 +1,33 @@
-from src.operations import add,subtract,Scalar_Multiplication,multiply,transpose,zeros,identity,determinant_2x2,minor,determinant,cofactor
-from src.validation import is_matrix_2x2
+def menu():
 
-A = [
-    [1,2,3],
-    [0 , 1 , 1]
-]
+    print("="*40)
+    print("      MATRIX CALCULATOR")
+    print("="*40)
 
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Scalar Multiply")
+    print("5. Scalar Divide")
+    print("6. Transpose")
+    print("7. Determinant")
+    print("8. Inverse")
+    print("9. Identity Matrix")
+    print("10. Zero Matrix")
+    print("0. Exit")
 
-B = [
-    [1, 2],
-    [3, 4]
-]
-A = [[1,2,3],[1,0,1],[1,2,2]]
-C = [[1,1,1,0],[2,1,4,1],[0,0,9,3],[1,2,1,5]]
+    return input("\nChoose an option: ")
 
-print(minor(C,0,0))
-print(minor(C,2,0))
-print(minor(C,0,1))
-print(determinant(C))
-print(cofactor(A))
-print(cofactor(C))
+def main():
+
+    while True:
+
+        choice = menu()
+
+        if choice == "0":
+
+            print("Good Bye!")
+
+            break
+if __name__ == "__main__":
+    main()
